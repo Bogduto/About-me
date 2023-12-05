@@ -3,12 +3,12 @@ import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPoMTaFafKpLFYLvx2x4Jmnv85lKkYww8",
-  authDomain: "leading-gallery.firebaseapp.com",
-  projectId: "leading-gallery",
-  storageBucket: "leading-gallery.appspot.com",
-  messagingSenderId: "1066382103089",
-  appId: "1:1066382103089:web:3513a32bc53b6eb86dbb10",
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
 };
 
 // Initialize Firebase
