@@ -3,6 +3,8 @@ import DefaultContainer from "@/components/containers/DefaultContainer/index";
 import { ArrowRight } from "lucide-react";
 import Link from "@/node_modules/next/link";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import { collection, getDocs, where, query } from "firebase/firestore";
 import { db } from "@/configs/firebase.config";
 import { notFound } from "@/node_modules/next/navigation";
@@ -24,7 +26,10 @@ const getDocumentByName = async (documentName: string) => {
         data: docData,
       };
     } else {
-      console.log("No documents found with the specified field value.", documentName);
+      console.log(
+        "No documents found with the specified field value.",
+        documentName
+      );
       notFound();
     }
   } catch (error) {
@@ -34,7 +39,7 @@ const getDocumentByName = async (documentName: string) => {
 };
 
 const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
-  const workName = params.name.replaceAll("%20", " ")
+  const workName = params.name.replaceAll("%20", " ");
   const workDoc = await getDocumentByName(workName);
   const work = workDoc?.data;
   return (
@@ -69,7 +74,11 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
                 <span className="text-white rounded-[2px] uppercase bg-pink px-[12px] py-[5px] font-bold text-[13px]">
                   website
                 </span>
-                <Link href={work.website} target="_blank" className="font-bold text-[14px] text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active cursor-pointer">
+                <Link
+                  href={work.website}
+                  target="_blank"
+                  className="font-bold text-[14px] text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active cursor-pointer"
+                >
                   {work.website}
                 </Link>
               </li>
@@ -93,10 +102,13 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
               </li>
             </ul>
           </div>
-
+          
           <div className="w-full mb-[40px] flex flex-col gap-[20px]">
             {work.images.map((item: string, key: any) => (
-              <div key={key} className="relative w-full min-h-[270px] bg-[#CCCDC6]">
+              <div
+                key={key}
+                className="relative w-full min-h-[270px] bg-[#CCCDC6]"
+              >
                 <Image src={item} fill alt="work image" />
               </div>
             ))}
