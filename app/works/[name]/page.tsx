@@ -96,8 +96,8 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
                 <span className="text-white rounded-[2px] uppercase bg-pink px-[12px] py-[5px] font-bold text-[13px]">
                   stack
                 </span>
-                <span className="font-bold text-[14px] text-black dark:text-white">
-                  {work.stack.map((item: string) => `${item},`)}
+                <span className="font-bold capitalize text-[14px] text-black dark:text-white">
+                  {work.stack.join(", ")}
                 </span>
               </li>
             </ul>
