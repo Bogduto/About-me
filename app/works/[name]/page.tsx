@@ -102,12 +102,12 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
               </li>
             </ul>
           </div>
-          
+
           <div className="w-full mb-[40px] flex flex-col gap-[20px]">
             {work.images.map((item: string, key: any) => (
               <div
                 key={key}
-                className="relative w-full min-h-[270px] bg-[#CCCDC6]"
+                className="relative w-full mobile:min-h-[150px] mobileM:min-h-[200px] tablet:min-h-[270px] bg-[#CCCDC6]"
               >
                 <Image src={item} fill alt="work image" />
               </div>

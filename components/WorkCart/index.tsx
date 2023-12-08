@@ -16,7 +16,7 @@ const WorkCart = ({
   return (
     <Link className="w-full min-h-[150px]" shallow href={`/works/${website}`}>
       {/* image */}
-      <div className="relative w-full min-h-[270px] mb-[20px]">
+      <div className="relative w-full mobile:min-h-[150px] mobileM:min-h-[200px] tablet:min-h-[270px] mb-[20px]">
         <Image src={image} fill alt="home page" />
       </div>
       {/* title */}
