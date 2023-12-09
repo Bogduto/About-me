@@ -70,25 +70,27 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
           {/* links, stack, platforms */}
           <div className="w-full items-start">
             <ul className="flex flex-col gap-[20px] my-[40px]">
-              <li className="flex flex-row items-center gap-[10px]">
-                <span className="text-white rounded-[2px] uppercase bg-pink px-[12px] py-[5px] font-bold text-[13px]">
-                  website
-                </span>
-                <Link
-                  href={work.website}
-                  target="_blank"
-                  className="font-bold text-[14px] text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active cursor-pointer"
-                >
-                  {work.website}
-                </Link>
-              </li>
+              {work.website ? (
+                <li className="flex flex-row items-center gap-[10px]">
+                  <span className="text-white rounded-[2px] uppercase bg-pink px-[12px] py-[5px] font-bold text-[13px]">
+                    website
+                  </span>
+                  <Link
+                    href={work.website}
+                    target="_blank"
+                    className="font-bold text-[14px] text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active cursor-pointer"
+                  >
+                    {work.website}
+                  </Link>
+                </li>
+              ) : null}
 
               <li className="flex flex-row items-center gap-[10px]">
                 <span className="text-white rounded-[2px] uppercase bg-pink px-[12px] py-[5px] font-bold text-[13px]">
                   platforms
                 </span>
                 <span className="font-bold text-[14px] text-black dark:text-white">
-                  {work.platforms.map((item: string) => `${item}/`)}
+                  {work.platforms.join("/")}
                 </span>
               </li>
 
