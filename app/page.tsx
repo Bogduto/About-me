@@ -4,6 +4,8 @@ import AboutSection from "@/components/About/index";
 import HelpfulLinksSection from "@/components/Links/index";
 import WorkSection from "@/components/Works/index";
 
+export const dynamic = 'force-dynamic';
+
 const HomePage = async () => {
   return (
     <div>
