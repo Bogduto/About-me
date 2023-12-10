@@ -6,6 +6,7 @@ import WorkSection from "@/components/Works/index";
 
 export const dynamic = 'force-dynamic';
 
+import { Skeleton } from "@/components/ui/skeleton";
 const HomePage = async () => {
   return (
     <div>

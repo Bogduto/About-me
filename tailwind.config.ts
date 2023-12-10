@@ -20,9 +20,11 @@ const config: Config = {
         "white": "#F2F2F2",
         "white-hover": "#A6A6A6",
         "white-active" : "#D9D9D9",
+        'white-skeleton': '#3f3f3f',
         "black": "#010101",
         "black-hover": "#4A4A4A",
         "black-active": "#6D6D6D",
+        'black-skeleton': '#e0e0e0',
         "pink": "#e356e1"
       },
     },
