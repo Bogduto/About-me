@@ -8,6 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import DefaultContainer from "@/components/containers/DefaultContainer/index";
 // services
 import { getDocumentByName } from "@/services/document.firebase";
+import WorkDetails from "@/components/WorkDetails/index";
 
 const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
   const workName = params.name.replaceAll("%20", " ");
@@ -22,12 +23,12 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
       >
         <div className="w-full flex flex-col justify-start items-center">
           <div className="w-full">
-            <ul className="flex flex-row items-center mb-[35px] gap-[8px]">
+            <ul className="pb-[5px] flex flex-row items-center mb-[35px] gap-[8px]">
               <Link
-                className="text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active duration-200 capitalize font-medium text-[14px]"
+                className="border-b-[2px] border-b-ichigo text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active duration-200 capitalize font-medium text-[14px]"
                 href="/"
               >
-                Home Page
+                Home
               </Link>
               <div className="relative flex flex-row items-center justify-center w-[14px] h-[14px]">
                 <ArrowRight />
@@ -39,40 +40,7 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
             {work.desc}
           </div>
           <div className="w-full">
-            <ul className="flex flex-col gap-[20px] my-[40px]">
-              {work.website && (
-                <li className="flex flex-row items-center gap-[10px]">
-                  <span className="text-white rounded-[2px] uppercase bg-ichigo px-[12px] font-bold text-[13px]">
-                    Website
-                  </span>
-                  <Link
-                    href={work.website}
-                    target="_blank"
-                    className="font-bold text-[14px] text-black hover:text-black-hover active:text-black-active dark:text-white dark:hover:text-white-hover dark:active:text-white-active cursor-pointer"
-                  >
-                    {work.website}
-                  </Link>
-                </li>
-              )}
-
-              <li className="flex flex-row items-center gap-[10px]">
-                <span className="text-white rounded-[2px] uppercase bg-ichigo px-[12px]  font-bold text-[13px]">
-                  Platforms
-                </span>
-                <span className="font-bold text-[14px] text-black dark:text-white">
-                  {work.platforms.join("/")}
-                </span>
-              </li>
-
-              <li className="flex flex-row items-center gap-[10px]">
-                <span className="text-white rounded-[2px] uppercase bg-ichigo px-[12px] font-bold text-[13px]">
-                  Stack
-                </span>
-                <span className="font-bold capitalize text-[14px] text-black dark:text-white">
-                  {work.stack.join(", ")}
-                </span>
-              </li>
-            </ul>
+            <WorkDetails work={work} />
           </div>
         </div>
       </DefaultContainer>
