@@ -2,20 +2,31 @@
 import React from "react";
 import Link from "@/node_modules/next/link";
 import dynamic from "@/node_modules/next/dynamic";
-import { SquareUserRound } from "lucide-react";
+// components
 import DefaultContainer from "../containers/DefaultContainer/index";
+// services
+import { getProfile } from "@/services/github.profile";
+
+
 
 const ModeToggle = dynamic(() => import("../ToggleTheme/index"), {
   ssr: false,
 });
 
-const Navbar = () => {
+const Navbar = async () => {
+  const profile = await getProfile();
+  const avatar = profile?.avatar_url;
+
   return (
-    <div className="z-10 w-full h-[40px] bg-inherit bg-[rgba(255, 255, 255, .4)] backdrop-blur-sm fixed top-0 left-0">
+    <div className="z-10 w-full py-[5px] bg-inherit bg-[rgba(255, 255, 255, .4)] backdrop-blur-sm fixed top-0 left-0">
       <DefaultContainer customStyles="h-full items-center flex flex-row justify-between gap-[20px]">
-        <Link href={"/"}>
-          <SquareUserRound />
-        </Link>
+        {avatar && (
+          <img
+            className="w-[35px] h-[35px] rounded-[35px]"
+            src={avatar}
+            alt="avatar"
+          />
+        )}
         <ul className="mobile:hidden mobileM:flex w-full h-full items-center justify-center flex-row gap-[20px]">
           <li className="">
             <Link
@@ -46,7 +57,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="w-[20px] h-[20px] block">
-            <ModeToggle />
+          <ModeToggle />
         </div>
       </DefaultContainer>
     </div>
