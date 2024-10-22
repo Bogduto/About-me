@@ -13,7 +13,7 @@ const AboutSection = () => {
         development using{" "}
         <span className="font-bold">
           <Link
-            className="text-black hover:text-black-hover dark:text-white dark:hover:text-white-hover"
+            className="duration-200 text-ichigo hover:text-black-hover"
             href="https://react.dev/"
           >
             React.js
@@ -22,7 +22,7 @@ const AboutSection = () => {
         and{" "}
         <span className="font-bold">
           <Link
-            className="text-black hover:text-black-hover dark:text-white dark:hover:text-white-hover"
+            className="duration-200 text-ichigo hover:text-black-hover"
             href={"https://nextjs.org/"}
           >
             Next.js

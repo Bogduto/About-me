@@ -25,7 +25,7 @@ const config: Config = {
         "black-hover": "#4A4A4A",
         "black-active": "#6D6D6D",
         'black-skeleton': '#e0e0e0',
-        "pink": "#e356e1"
+        "ichigo": "#ff3399"
       },
     },
   },

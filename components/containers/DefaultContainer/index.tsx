@@ -1,12 +1,20 @@
-"use client"
-import React from 'react'
+"use client";
+import { cn } from "@/lib/utils";
+import React from "react";
 
-const DefaultContainer = ({children, customStyles}: any) => {
+const DefaultContainer = ({ children, customStyles }: any) => {
   return (
-    <div className={`${customStyles ? customStyles : ""} mobile:px-[20px] tablet:px-0 mobile:w-full tablet:w-[500px] m-auto`}>{children}</div>
-  )
-}
+    <div
+      className={cn(
+        customStyles,
+        "mobile:px-[20px] tablet:px-0 mobile:w-full tablet:w-[500px] mx-auto"
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
 // mobile:px-[20px] tablet:px-[0]
 
-export default DefaultContainer
+export default DefaultContainer;
