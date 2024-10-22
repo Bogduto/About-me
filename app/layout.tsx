@@ -11,7 +11,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider/index";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Bogduto | portfolio",
   description: "My own portfolio",
 };
 
@@ -25,7 +25,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" enableSystem={true}>
           {children}
-
           <Footer />
         </ThemeProvider>
       </body>

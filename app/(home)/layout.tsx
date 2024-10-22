@@ -1,6 +1,13 @@
 import React from "react";
+import type { Metadata } from "next";
+
 // components
 import Navbar from "@/components/Navbar/index";
+
+
+export const metadata: Metadata = {
+  title: "Bogduto | home",
+};
 
 const homeLayout = ({ children }: any) => {
   return (
