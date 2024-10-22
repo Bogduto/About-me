@@ -11,6 +11,13 @@ export const resources = {
         works: "Works",
         links: "Helpful Links",
       },
+      work: {
+        details: {
+          platforms: "platforms",
+          stack: "stack",
+          website: "website",
+        },
+      },
     },
   },
   ua: {
@@ -23,6 +30,13 @@ export const resources = {
         works: "Проекти",
         about: "Про себе",
         links: "Корисні посилання",
+      },
+      work: {
+        details: {
+          platforms: "платформи",
+          stack: "стек",
+          website: "вебсайт",
+        },
       },
     },
   },
