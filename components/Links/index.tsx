@@ -7,7 +7,7 @@ import Section from "../Section/index";
 
 const HelpfulLinksSection = () => {
   return (
-    <Section sectionId="links" title="Helpful links">
+    <Section sectionId="links" title="links">
       <ul className="flex flex-col gap-[20px] mt-[20px]">
         <li className="cursor-pointer font-medium dark:text-white dark:hover:text-white-hover dark:text-white-active text-black hover:text-black-hover active:text-black-active capitalize">
           <Link className="flex flex-row gap-[10px]" href={"https://github.com/Bogduto"} target="_blank">

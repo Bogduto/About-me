@@ -1,20 +1,20 @@
 "use client";
 import React from "react";
-import Link from "@/node_modules/next/link";
 import dynamic from "@/node_modules/next/dynamic";
 // components
 import DefaultContainer from "../containers/DefaultContainer/index";
+import LanguageToggle from "../ToggleLanguage/index";
+
 // services
 import { getProfile } from "@/services/github.profile";
-
-
+import NavbarList from "../NavbarList/index";
 
 const ModeToggle = dynamic(() => import("../ToggleTheme/index"), {
   ssr: false,
 });
 
 const Navbar = async () => {
-  const profile = await getProfile();
+  const profile = (await getProfile()) as any;
   const avatar = profile?.avatar_url;
 
   return (
@@ -27,37 +27,13 @@ const Navbar = async () => {
             alt="avatar"
           />
         )}
-        <ul className="mobile:hidden mobileM:flex w-full h-full items-center justify-center flex-row gap-[20px]">
-          <li className="">
-            <Link
-              scroll
-              href="/#about"
-              className="tablet:text-[16px] mobile:text-[13px] capitalize font-medium duration-200 text-black dark:text-white dark:hover:text-white-hover dark:active:text-white-active hover:text-black-hover active:text-black-active"
-            >
-              About
-            </Link>
-          </li>
-          <li className="">
-            <Link
-              scroll
-              href="/#works"
-              className="tablet:text-[16px] mobile:text-[13px] capitalize font-medium duration-200 text-black dark:text-white dark:hover:text-white-hover dark:active:text-white-active hover:text-black-hover active:text-black-active"
-            >
-              Works
-            </Link>
-          </li>
-          <li className="">
-            <Link
-              scroll
-              href="/#links"
-              className="tablet:text-[16px] mobile:text-[13px] capitalize font-medium duration-200 text-black dark:text-white dark:hover:text-white-hover dark:active:text-white-active hover:text-black-hover active:text-black-active"
-            >
-              Helpful Links
-            </Link>
-          </li>
-        </ul>
+        <NavbarList />
         <div className="w-[20px] h-[20px] block">
           <ModeToggle />
+        </div>
+
+        <div>
+          <LanguageToggle />
         </div>
       </DefaultContainer>
     </div>
