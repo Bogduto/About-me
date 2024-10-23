@@ -28,12 +28,14 @@ const Navbar = async () => {
           />
         )}
         <NavbarList />
-        <div className="w-[20px] h-[20px] block">
-          <ModeToggle />
-        </div>
+        <div className="flex flex-row gap-[10px] items-center">
+          <div className="w-[20px] h-[20px] block">
+            <ModeToggle />
+          </div>
 
-        <div>
-          <LanguageToggle />
+          <div>
+            <LanguageToggle />
+          </div>
         </div>
       </DefaultContainer>
     </div>
