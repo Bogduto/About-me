@@ -2,14 +2,14 @@
 import React from "react";
 import Link from "@/node_modules/next/link";
 import Section from "../Section/index";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
   const { t } = useTranslation();
   return (
     <Section title="about" sectionId="about">
-      <p className="text-[15px] text-left text-black dark:text-white">
-        {t('about')}
+      <p className="text-[15px] text-left text-black text-base items-center dark:text-white">
+        {t("about")}
         <span className="font-bold">
           <Link
             className="duration-200 text-ichigo hover:text-black-hover"
@@ -18,7 +18,7 @@ const AboutSection = () => {
             React.js
           </Link>
         </span>
-        ,{" "}
+        {t("and")}
         <span className="font-bold">
           <Link
             className="duration-200 text-ichigo hover:text-black-hover"

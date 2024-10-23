@@ -1,10 +1,8 @@
 export const resources = {
   en: {
     translation: {
-      about: `Hello, I'm Bogdan from Ukraine, and I am passionate about computer
-          science. I&apos;ve been studying computer science at university while
-          also working as a Full Stack developer, specializing in website
-          development using frameworks like `,
+      about: `I am a fullstack developer from Ukraine. My primary focus is front-end development, but I can also handle back-end development when needed. Currently, I am working as a freelancer. My main development tools are `,
+      and: " and ",
 
       nav: {
         about: "About",
@@ -18,14 +16,17 @@ export const resources = {
           website: "website",
         },
       },
+      works: {
+        buttons: {
+          explore: "explore more",
+        },
+      },
     },
   },
   ua: {
     translation: {
-      about: `Привіт, я Богдан з України, і я захоплююся комп'ютерними науками.
-          наукою. Я вивчаю комп'ютерні науки в університеті, а також
-          паралельно працюючи Full Stack розробником, спеціалізуючись на розробці веб-сайтів
-          з використанням фреймворків `,
+      about: `Я - fullstack розробник з України. Моя основна діяльність - це front-end розробка, але також можу займатися back-end розробкою за потреби. Зараз працюю як фрілансер. Основні інструменти для розробки - `,
+      and: " та ",
       nav: {
         works: "Проекти",
         about: "Про себе",
@@ -36,6 +37,11 @@ export const resources = {
           platforms: "платформи",
           stack: "стек",
           website: "вебсайт",
+        },
+      },
+      works: {
+        buttons: {
+          explore: "дослідити більше",
         },
       },
     },
