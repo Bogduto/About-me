@@ -21,6 +21,12 @@ export const resources = {
           explore: "explore more",
         },
       },
+      helpfulLinks: {
+        another: "another",
+        source: "source code",
+        social: "social media",
+        freelance: "freelance"
+      }
     },
   },
   ua: {
@@ -44,6 +50,12 @@ export const resources = {
           explore: "дослідити більше",
         },
       },
+      helpfulLinks: {
+        another: "інше",
+        source: "код",
+        social: "соціальні мережі",
+        freelance: "Фріланс"
+      }
     },
   },
 };
