@@ -1,6 +1,6 @@
 import React from "react";
 // components
-import WorkCart from "../WorkCart/index";
+import { WorkCart } from "./components/index";
 import CartSkeleton from "../CartSkeleton/index";
 import Section from "../Section/index";
 // services

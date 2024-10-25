@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "@/node_modules/next/link";
-import Section from "../Section/index";
+import Section from "../../../../components/Section/index";
 import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {

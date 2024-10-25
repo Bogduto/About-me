@@ -2,17 +2,10 @@
 import React from "react";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
-const WorkCart = ({
-  image,
-  title,
-  desc,
-  website
-}: {
-  image: string;
-  title: string;
-  desc: string;
-  website: string
-}) => {
+// interfaces
+import { WorkI } from "./work.interface";
+
+const WorkCart = ({ image, title, desc, website }: WorkI) => {
   return (
     <Link className="w-full min-h-[150px]" shallow href={`/works/${website}`}>
       {/* image */}
@@ -20,9 +13,13 @@ const WorkCart = ({
         <Image src={image} fill alt="home page" />
       </div>
       {/* title */}
-      <div className="mb-[10px] capitalize text-black dark:text-white text-[17px] font-bold">{title}</div>
+      <div className="mb-[10px] capitalize text-black dark:text-white text-[17px] font-bold">
+        {title}
+      </div>
       {/* description */}
-      <div className="text-[14px] font-medium text-black dark:text-white">{desc.slice(0, 100)}</div>
+      <div className="text-[14px] font-medium text-black dark:text-white">
+        {desc.slice(0, 100)}
+      </div>
     </Link>
   );
 };

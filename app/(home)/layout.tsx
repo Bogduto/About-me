@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 // components
-import Navbar from "@/components/Navbar/index";
+import Navbar from "@/components/Layout/Navbar/index";
 
 
 export const metadata: Metadata = {

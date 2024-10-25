@@ -1,6 +1,6 @@
 import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
-import DefaultContainer from "@/components/containers/DefaultContainer/index";
+import DefaultContainer from "@/components/Containers/DefaultContainer/index";
 
 const Loading = () => {
   return (

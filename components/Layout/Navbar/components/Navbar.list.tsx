@@ -1,7 +1,8 @@
 "use client";
-import Link from "@/node_modules/next/link";
 import React from "react";
+import Link from "@/node_modules/next/link";
 import { useTranslation } from "react-i18next";
+
 const NavbarList = () => {
   const { t } = useTranslation();
   return (

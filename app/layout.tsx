@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 // components
-import Footer from "@/components/Footer/index";
+import Footer from "@/components/Layout/Footer/index";
 // providers
-import { ThemeProvider } from "@/components/providers/ThemeProvider/index";
+import { ThemeProvider } from "@/components/Providers/ThemeProvider/index";
 
 const inter = Inter({ subsets: ["latin"] });
 

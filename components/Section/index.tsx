@@ -2,7 +2,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 // components
-import DefaultContainer from "../containers/DefaultContainer/index";
+import DefaultContainer from "../Containers/DefaultContainer/index";
 
 const Section = ({
   children,
