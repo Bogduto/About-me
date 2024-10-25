@@ -23,9 +23,9 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
           <div className="w-full">
             <NavigationContainer workName={workName} />
           </div>
-          <div className="w-full text-normal text-[15px] leading-[25px]">
+          <p className="w-full text-normal text-[15px] leading-[25px]">
             {work.desc}
-          </div>
+          </p>
           <div className="w-full">
             <WorkDetails work={work} />
           </div>
