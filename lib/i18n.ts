@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 // contants
-import { resources } from "@/constants/resources";
+import { resources } from "@/constants/resources/resources";
 
 
 i18n.use(initReactI18next).init({
