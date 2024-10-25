@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 // components
-import DefaultContainer from "../../Containers/DefaultContainer/index";
+import DefaultContainer from "@/components/Containers/DefaultContainer/index";
 import { Avatar, List, Buttons } from "./components/index";
 // services
 import { getProfile } from "@/services/github.profile";

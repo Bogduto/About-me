@@ -1,4 +1,5 @@
 import React from "react";
+// components
 import { Skeleton } from "@/components/ui/skeleton";
 import DefaultContainer from "@/components/Containers/DefaultContainer/index";
 

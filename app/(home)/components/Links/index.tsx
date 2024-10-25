@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import Link from "@/node_modules/next/link";
-import { Button } from "../../../../components/ui/button";
-import { SquareCode, Github, Linkedin } from "lucide-react";
-import Section from "../../../../components/Section/index";
 import { useTranslation } from "react-i18next";
+// icons
+import { SquareCode, Github, Linkedin } from "lucide-react";
+// components
+import Section from "../../../../components/Section/index";
 
 const HelpfulLinksSection = () => {
   const { t } = useTranslation();
@@ -58,9 +59,9 @@ const HelpfulLinksSection = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="lucide lucide-handshake"
               >
                 <path d="m11 17 2 2a1 1 0 1 0 3-3" />
