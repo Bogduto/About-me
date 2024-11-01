@@ -1,17 +1,20 @@
 import React from "react";
-import Link from "@/node_modules/next/link";
 // components
-import { Skeleton } from "@/components/ui/skeleton";
 import DefaultContainer from "@/components/Containers/DefaultContainer/index";
 import WorkDetails from "@/app/works/[name]/components/WorkDetails/index";
 import { ImagesContainer, NavigationContainer } from "./components/index";
 // services
-import { getDocumentByName } from "@/services/document.firebase";
+import { getProject } from "@/utils/requests";
 
 const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
   const workName = params.name.replaceAll("%20", " ");
-  const workDoc = await getDocumentByName(workName);
-  const work = workDoc?.data;
+
+  const project = await getProject(workName);
+  
+  if (!project) {
+    return <div>not found</div>;
+  }
+
   return (
     <div className="relative w-full h-full flex flex-row flex-wrap items-start">
       <DefaultContainer
@@ -24,15 +27,15 @@ const WorkDetailPage = async ({ params }: { params: { name: string } }) => {
             <NavigationContainer workName={workName} />
           </div>
           <p className="w-full text-normal text-[15px] leading-[25px]">
-            {work.desc}
+            {project.desc}
           </p>
           <div className="w-full">
-            <WorkDetails work={work} />
+            <WorkDetails work={project} />
           </div>
         </div>
       </DefaultContainer>
 
-      <ImagesContainer images={work.images} />
+      <ImagesContainer images={project.images} />
     </div>
   );
 };

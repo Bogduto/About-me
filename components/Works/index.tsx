@@ -4,24 +4,30 @@ import { WorkCart } from "./components/index";
 import CartSkeleton from "../CartSkeleton/index";
 import Section from "../Section/index";
 // services
-import { getDocuments } from "@/services/document.firebase";
-
+import { getProjects } from "@/utils/requests";
+// supabase
 export const revalidate = 3600;
 
 const WorkSection = async () => {
-  const works = await getDocuments();
+
+  const projects = await getProjects();
+  
+  
+  if (!projects) {
+    return <p>No posts found.</p>
+  }
 
   return (
     <Section title={"works"} sectionId={"works"}>
       <div className="flex flex-row flex-wrap gap-[20px]">
-        {works ? (
-          works.map((work: any, key: any) => (
+        {projects ? (
+          projects.map((work: any, key: any) => (
             <WorkCart
               key={key}
-              website={work.data.name}
-              image={work.data.homePageImage}
-              title={work.data.name}
-              desc={work.data.desc}
+              website={work.name}
+              image={work.images[0]}
+              title={work.name}
+              desc={work.desc}
             />
           ))
         ) : (
